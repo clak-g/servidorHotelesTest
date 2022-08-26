@@ -14,6 +14,7 @@ export class servidor{
     constructor(){
         this.app = express() //atributo, una variable
         this.habilitarBody()
+        this.conectarconBd()
         this.atenderPeticiones()
     }
 
