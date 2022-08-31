@@ -26,13 +26,13 @@ rutas.put('/viajescomfama/v1/habitacion/:id',controladorHabitacion.editarHabitac
 
 //ENDPOINTS PARA LOS SERVICIOS ASOCIADOS A LAS RESERVAS
 
-rutas.get('viajescomfama/v1/reservas/',controladorReserva.buscarReserva)
+rutas.get('/viajescomfama/v1/reservas/',controladorReserva.buscarReserva)
 
-rutas.get('viajescomfama/v1/reservas/:id',controladorReserva.buscarReservaPorId)
+rutas.get('/viajescomfama/v1/reservas/:id',controladorReserva.buscarReservaPorId)
 
-rutas.post('viajescomfama/v1/reserva',controladorReserva.agregarReserva)
+rutas.post('/viajescomfama/v1/reserva',controladorReserva.agregarReserva)
 
-rutas.put('viajescomfama/v1/reserva/id',controladorReserva.editarReserva)
+rutas.put('/viajescomfama/v1/reserva/id',controladorReserva.editarReserva)
 
 //rutas.delete('viajescomfama/v1/cancelar/id',function (req, res) {
 //  res.send('Hello World')
