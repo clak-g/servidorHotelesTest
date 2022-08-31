@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 //esquemade datos mongoose
 //el esquema es una regla de que datos voy a manipular
 const Reserva = new Schema({
-   idhabitacion:{
+   idreserva:{
     type:String,
     required:true
    },
@@ -35,4 +35,4 @@ const Reserva = new Schema({
     
 })
 
-const modeloReserva=mongoose.model('reserva',Reserva)
+export const modeloReserva=mongoose.model('reserva',Reserva)

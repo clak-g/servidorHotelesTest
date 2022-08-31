@@ -91,7 +91,7 @@ export class ControllerHabitacion{
         }}
 
         //eliminar habitacion
-        eliminarHabitacion(request, response){
+       /* eliminarHabitacion(request, response){
             try{
             response.status(200).json({
                 mensaje:"exito en la consulta",
@@ -101,5 +101,5 @@ export class ControllerHabitacion{
             
             response(400).json({mensaje:"fallo en resolviendo la peticion"+error,
             datos:null})
-        }}
+        }}]*/
 }
