@@ -7,7 +7,7 @@ export class ControllerReserva{
     
 
 //buscar reserva
-buscarReserva(request, response){
+async buscarReserva(request, response){
 
     let servicioReserva = new ServicioReserva()
         //intento resolver la peticion
@@ -24,7 +24,7 @@ buscarReserva(request, response){
         }
 }
 
-buscarReservaPorId(request,response){
+async buscarReservaPorId(request,response){
     let identificador=request.params.id
     
     let servicioReserva = new ServicioReserva()
@@ -41,7 +41,7 @@ buscarReservaPorId(request,response){
     }
 }
 
-agregarReserva(request,response){
+async agregarReserva(request,response){
     let cuerpo = request.body
             //llamo al servicio habitaciones
     let servicioReserva=new ServicioReserva()
@@ -61,7 +61,7 @@ agregarReserva(request,response){
     }
 }
 
-editarReserva(request, response){
+async editarReserva(request, response){
     let id = request.params.id
     let datos = request.body
     let servicioReserva=new ServicioReserva()
