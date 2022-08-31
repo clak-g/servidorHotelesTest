@@ -6,8 +6,8 @@ import {rutas} from '../routers/rutas.js'
 
 
 //LLAMAR EL METODO CONECTAR CON LA DB
-import { conect } from "../database/conexion.js"
-import { connect } from 'mongoose'
+import { conectar } from "../database/conexion.js"
+
 
 export class servidor{
 
@@ -35,6 +35,6 @@ export class servidor{
     
     }
     conectarconBd(){
-        connect()
+        conectar()
     }
 }

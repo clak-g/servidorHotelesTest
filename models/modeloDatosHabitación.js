@@ -24,5 +24,5 @@ const Habitacion = new Schema({
     }
 })
 
-export const modeloHabitacion=mongoose.model('habitacion')
+export const modeloHabitacion=mongoose.model('Habitacion', Habitacion)
 

@@ -1,4 +1,4 @@
-import {ServicioHabitacion} from "../services/ServicioHabitacion.js"
+import { ServicioHabitacion } from "../services/ServicioHabitacion.js"
 export class ControllerHabitacion{
 
 

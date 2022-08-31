@@ -1,6 +1,6 @@
 import {modeloHabitacion} from "../models/modeloDatosHabitación.js"
 
-class ServicioHabitacion{
+export class ServicioHabitacion{
 
     constructor(){}
 
