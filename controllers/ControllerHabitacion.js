@@ -5,7 +5,7 @@ export class ControllerHabitacion{
         constructor(){}
 
         //buscar habitaciones
-        buscarHabitaciones(request, response){
+        async buscarHabitaciones(request, response){
 
             //llamo al servicio
             let servicioHabitacion = new ServicioHabitacion()
@@ -13,7 +13,7 @@ export class ControllerHabitacion{
             try{
                 response.status(200).json({
                     mensaje:"exito en la consulta",
-                    datos:servicioHabitacion.buscarTodas()            
+                    datos:await servicioHabitacion.buscarTodas()            
                 })
             }catch(error){ //fallo resolviendo la peticion
                 
@@ -24,7 +24,7 @@ export class ControllerHabitacion{
             }
         }
         //buscar habicacion por id
-        buscarHabitacionPorId(request, response){
+        async buscarHabitacionPorId(request, response){
             let identificador=request.params.id
 
             //llamo al servicio habitaciones
@@ -33,7 +33,7 @@ export class ControllerHabitacion{
             try{
                 response.status(200).json({
                     mensaje:"exito en la consulta "+identificador,
-                    datos:servicioHabitacion.buscarPorId(identificador)
+                    datos:await servicioHabitacion.buscarPorId(identificador)
                 })
             }catch(error){ //fallo resolviendo la peticion
                 
@@ -44,13 +44,13 @@ export class ControllerHabitacion{
             }
         }
         //agregar habitacion
-        agregarHabitacion(request, response){
+        async agregarHabitacion(request, response){
             let cuerpo = request.body
             //llamo al servicio habitaciones
             let servicioHabitacion=new ServicioHabitacion()
            
             try{
-                servicioHabitacion.agregar(cuerpo)
+                await servicioHabitacion.agregar(cuerpo)
                 
                 response.status(200).json({
                     mensaje:"exito agregando habitacion",
@@ -65,7 +65,7 @@ export class ControllerHabitacion{
         }
     
         //editar habitacion
-        editarHabitacion(request, response){
+        async editarHabitacion(request, response){
             
 
             //recibir id como parametro
@@ -78,7 +78,7 @@ export class ControllerHabitacion{
             let servicioHabitacion=new ServicioHabitacion()
            
             try{
-                servicioHabitacion.actualizar(id,datos)
+                await servicioHabitacion.actualizar(id,datos)
             response.status(200).json({
                 mensaje: "exito editando la habitacion" + id,
                 datos: null
