@@ -34,6 +34,8 @@ rutas.post('/viajescomfama/v1/reserva',controladorReserva.agregarReserva)
 
 rutas.put('/viajescomfama/v1/reserva/:id',controladorReserva.editarReserva)
 
+rutas.delete('/viajescomfama/v1/reserva/id',controladorReserva.eliminar)
+
 //rutas.delete('viajescomfama/v1/cancelar/id',function (req, res) {
 //  res.send('Hello World')
 //})
