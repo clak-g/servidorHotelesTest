@@ -26,7 +26,7 @@ export class ServicioReserva{
 
     async eliminarReserva(id){
         const id = req.params.id;
-    return await modeloReserva.deleteOne({_id: id});
+        return modeloReserva.findByIdAndDelete(id)
     
     }
 }
