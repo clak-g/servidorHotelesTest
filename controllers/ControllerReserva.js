@@ -68,7 +68,7 @@ async editarReserva(request, response){
     let servicioReserva=new ServicioReserva()
            
     try{
-        await servicioReserva.actualizar(id,datos)
+        await servicioReserva.actualizarReserva(id,datos)
         response.status(200).json({
             mensaje: "exito editando la Reserva  " + id,
             datos: null})

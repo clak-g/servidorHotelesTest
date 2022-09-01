@@ -19,7 +19,7 @@ export class ServicioReserva{
         return await reservaAGuardar.save()
     }
 
-    async actualizar(id,datos){
+    async actualizarReserva(id,datos){
         return modeloReserva.findByIdAndUpdate(id,datos)
     }
 }
