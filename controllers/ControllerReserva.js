@@ -14,7 +14,8 @@ async buscarReserva(request, response){
         try{
             response.status(200).json({
                 mensaje:"exito en la consulta",
-                datos:await servicioReserva.buscarTodasReservas()})  
+                datos:await servicioReserva.buscarTodasReservas()
+            })  
         }catch(error){ //fallo resolviendo la peticion
             
             response(400).json({
@@ -67,7 +68,7 @@ async editarReserva(request, response){
     let servicioReserva=new ServicioReserva()
            
     try{
-        await servicioHabitacion.actualizar(id,datos)
+        await servicioReserva.actualizar(id,datos)
         response.status(200).json({
             mensaje: "exito editando la Reserva  " + id,
             datos: null})
