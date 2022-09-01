@@ -80,15 +80,20 @@ async editarReserva(request, response){
 }}
 
 async eliminar(request,response){
-    let id = req.params.id;
+    let id = request.params.id
+   
     let servicioReserva=new ServicioReserva()
-  try {
-    await servicioReserva.eliminarReserva(id)
-    response.status(200).json({
-        mensaje: "exito eliminando la Reserva  " + id,
-        datos: null})
-  } catch (error) {
+           
+    try{
+        await servicioReserva.eliminarReserva(id)
+        response.status(200).json({
+            mensaje: "exito editando la Reserva  " + id,
+            datos: null})
+        
+}catch(error){ //fallo resolviendo la peticion
     
-  }
+    response(400).json({mensaje:"fallo en resolviendo la peticion"+error,
+            datos:null})
+}
 }
 }
