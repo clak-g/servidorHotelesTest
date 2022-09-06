@@ -87,7 +87,7 @@ async eliminar(request,response){
     try{
         await servicioReserva.eliminarReserva(id)
         response.status(200).json({
-            mensaje: "exito editando la Reserva  " + id,
+            mensaje: "exito eliminando la Reserva  " + id,
             datos: null})
         
 }catch(error){ //fallo resolviendo la peticion
